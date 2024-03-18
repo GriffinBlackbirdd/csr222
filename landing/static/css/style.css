@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #00FFAA; /* A vibrant, cyberpunk teal for primary actions */
+    --secondary-color: #0D0D0D; /* A slightly lighter shade of black for contrast */
+    --background-color: #050505; /* Near-black for the main background, enhancing the neon effect */
+    --text-color: #00FFAA; /* Using the vibrant teal for text to maintain consistency */
+    --section-background-color: #121217; /* A very dark blue, almost black, for sections, adding depth */
+    --border-color: #2A2A35; /* A dark blue-grey for borders, subtly separating elements */
+    --accent-color: #BB00FF; /* A bright, neon purple for accents and highlights, adding a pop of color */
+    --heading-font: 'Roboto Mono', monospace; /* Keeping the monospace font for a techy look */
+    --body-font: 'Roboto Mono', monospace; /* Consistency with the monospace font for body text */
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    background-color: var(--section-background-color);
+    border-radius: 8px;
+}
+
+.main-heading {
+    font-family: var(--heading-font);
+    background-color: var(--primary-color);
+    color: #000; /* Black text for contrast against the vibrant teal */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-size: 24px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.main-objective {
+    background-color: var(--section-background-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    line-height: 1.6;
+    color: var(--text-color);
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px var(--primary-color);
+    }
+    to {
+        box-shadow: 0 0 50px var(--accent-color);
+    }
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--section-background-color);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+p strong {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.section p:first-of-type {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.section p {
+    background-color: var(--section-background-color);
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Tooltip, footer, and responsive design styles remain unchanged */
+
+/* Tooltip, footer, and responsive design styles remain unchanged */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--primary-color); /* Optional: adds underline to indicate hoverable */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #BB00FF;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #BB00FF transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--section-background-color);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

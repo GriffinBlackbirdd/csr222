@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Insights</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"></head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">CA-2<br>PowerBi Dashboard Insights on Loan Data</h1>
+        <p class="main-objective typewrite">The objective of the provided data is to gain comprehensive insights into customer demographics, financial health, creditworthiness, loan dynamics, property trends, expense allocation, and the impact of dependencies and co-applicants on loan decisions. These insights inform strategic decision-making, risk assessment, customer targeting, and product optimization in the financial services domain.</p>
+        <div class="section" id="customer-demographics">
+            <h2>1. Customer Demographics Overview</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Pie charts<span class="tooltiptext">I am using Pie-charts to display proportions of categorical data like gender, profession, income stability.</span></span>, <span class="tooltip">Bar charts<span class="tooltiptext">I am using Bar-Charts to show comparisons between categories, such as age groups or types of employment.</span></span></p>
+            <p><strong>Headings Used:</strong> Gender, Age, Income Stability, Profession, Type of Employment, Location</p>
+            <p><strong>Purpose:</strong> To provide a quick overview of the customer base, including gender distribution, age groups, income stability, professions, types of employment, and geographical distribution.</p>
+        </div>
+        
+        <div class="section" id="financial-health">
+            <h2>2. Financial Health and Creditworthiness</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Histograms<span class="tooltiptext">I am using Histogram to illustrate distribution of numerical data like credit scores, loan expenses.</span></span>, <span class="tooltip">Scatter-Plots<span class="tooltiptext">I am using Scatter-Plots to reveal relationships between variables like income, credit score, loan amount, defaults.</span></span></p>
+            <p><strong>Headings Used:</strong> Credit Score, No. of Defaults, Has Active Credit Card, Income, Current Loan Expenses (USD)</p>
+            <p><strong>Purpose:</strong> To assess the financial health and creditworthiness of customers, highlighting relationships between income, credit scores, defaults, and current loan expenses.</p>
+        </div>
+        
+        <div class="section" id="loan-analysis">
+            <h2>3. Loan Analysis</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Box-Plots<span class="tooltiptext">I will be using Box-Plots to visualize variability in loan amounts requested, sanctioned, and property prices.</span></span>, <span class="tooltip">Line-Charts<span class="tooltiptext">I will be using Line-Charts to track changes over time, if applicable, in loan amounts or property prices.</span></span></p>
+            <p><strong>Headings Used:</strong> Loan Amount Request (USD), Loan Sanction Amount (USD), Property Price</p>
+            <p><strong>Purpose:</strong> To analyze loan amounts requested versus sanctioned, and to compare these figures with property prices, identifying trends or discrepancies.</p>
+        </div>
+        
+        <div class="section" id="property-insights">
+            <h2>4. Property Insights</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Map<span class="tooltiptext">I will be using Maps to show geographical distribution of properties.</span></span>, <span class="tooltip">Heat-Map<span class="tooltiptext">I will be using Heat-Map to highlight areas with higher property prices or concentration of certain property types.</span></span></p>
+            <p><strong>Headings Used:</strong> Property Location, Property Type, Property Price, Property Age</p>
+            <p><strong>Purpose:</strong> To provide insights into property types, locations, prices, and ages, potentially identifying popular areas or property types and their respective price ranges.</p>
+        </div>
+        
+        <div class="section" id="expense-analysis">
+            <h2>5. Expense Analysis</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Stacked-Bar-Charts<span class="tooltiptext">I will be using Stacked-Bar-Charts to break down expenses by type, showing total and component values.</span></span>, <span class="tooltip">Area-Charts<span class="tooltiptext">I will be using Area-Charts to display trends or cumulative totals of expenses over time, if relevant.</span></span></p>
+            <p><strong>Headings Used:</strong> Expense Type 1, Expense Type 2, Current Loan Expenses (USD)</p>
+            <p><strong>Purpose:</strong> To break down expenses by type for each customer, offering a detailed view of where customers are allocating their funds in relation to their loan expenses.</p>
+        </div>
+        
+        <div class="section" id="dependency-coapplicant-impact">
+            <h2>6. Dependency and Co-Applicant Impact</h2>
+            <p><strong>Visualizations:</strong> <span class="tooltip">Bubble-Charts<span class="tooltiptext">I will be using Bubble-Charts to compare dependencies and co-applicants' impact on loan amounts.</span></span>, <span class="tooltip">Conditional-Formatting-Tables<span class="tooltiptext">I will be using Conditional-Formatting-Tables to highlight significant variations or patterns in loan sanction amounts based on dependencies and co-applicants.</span></span></p>
+            <p><strong>Headings Used:</strong> Dependents, Co-Applicant, Loan Sanction Amount (USD)</p>
+            <p><strong>Purpose:</strong> To explore the impact of having dependents and co-applicants on the loan sanction amounts, potentially revealing patterns or correlations.</p>
+        </div>
+        
+        <div class="section" id="design-tips">
+            <h2>Critical Dashboard Insights:</h2>
+            <p><strong>KPIs:</strong> I will put <span class="tooltip">Avg LSA<span class="tooltiptext">Avg Loan Sanction Amount: this metric provides an overview of the typical amount of money sanctioned by the lender for loans. It indicates the average level of financial trust or risk assessment by the lender towards borrowers.</span></span>, <span class="tooltip">Avg CS<span class="tooltiptext">Avg Credit Score: this metric represents the average creditworthiness of customers based on their credit scores. A higher average credit score generally indicates a more financially responsible customer base with better repayment histories.</span></span>, <span class="tooltip">Total LAR<span class="tooltiptext">Total Loan Amount Request (USD): This metric shows the cumulative amount of money requested by customers as loans. It reflects the overall demand for loans and helps in understanding the magnitude of financial requirements among customers.</span></span> on top of my dashboard for quick insights.</p>
+            <p><strong>Interactivity:</strong> I will be incorporating slicers or filters based on Location, Profession, Gender, etc., to allow users to drill down into specific segments.</p>
+            <p><strong>Trends Over Time:</strong> I will consider adding time series analysis to track trends over time.</p>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer>
+            <p><a href="https://ogcpnraljbfftabkozml.supabase.co/storage/v1/object/public/projects/loan2.csv">Click here to download the Dataset</a></p>
+            <p>Data received from mentor Ziyaad Mahudawala</p>
+            <p>~made by Arreyan Hamid</p>
+        </footer>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        document.querySelectorAll('.typewrite').forEach(el => {
+            const text = el.innerHTML;
+            el.innerHTML = '';
+            let index = 0;
+
+            function typeWriterEffect() {
+                if (index < text.length) {
+                    el.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriterEffect, 50); // Adjust the typing speed as needed
+                }
+            }
+
+            typeWriterEffect();
+        });
+    };
+</script>
+</html>
